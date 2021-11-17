@@ -1,0 +1,90 @@
+h1,
+h2,
+h3 {
+  font-family: 'Alumni Sans', sans-serif;
+  color: green;
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.25rem;
+}
+
+.container {
+  max-width: 1020px;
+  padding: 24px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px 24px;
+  grid-auto-flow: row;
+  align-items: center;
+  grid-template-areas:
+    'hero-content'
+    'hero-image'
+    'introduction-image'
+    'introduction-content'
+    'team-content'
+    'team-image';
+  /*
+  grid-template-areas:
+    'hero-content hero-content hero-image'
+    'introduction-image introduction-content introduction-content'
+    'team-content team-content team-image';
+
+    grid-template-areas:
+    'hero-content'
+    'hero-image'
+    'introduction-image'
+    'introduction-content'
+    'team-content'
+    'team-image';
+    */
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 80vh);
+    grid-template-areas:
+      'hero-content hero-content hero-image'
+      'introduction-image introduction-content introduction-content'
+      'team-content team-content team-image';
+  }
+}
+
+.hero-content {
+  grid-area: hero-content;
+  background-color: #032d11;
+}
+
+.hero-image {
+  grid-area: hero-image;
+}
+
+.introduction-image {
+  grid-area: introduction-image;
+}
+
+.introduction-content {
+  grid-area: introduction-content;
+}
+
+.team-content {
+  grid-area: team-content;
+}
+
+.team-image {
+  grid-area: team-image;
+}
