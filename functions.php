@@ -2,6 +2,9 @@
 
 function load_stylesheets()
 {
+    wp_register_style('normalize', get_template_directory_uri() . '/styles/normalize.css', array(), 1, 'all');
+    wp_enqueue_style('normalize');
+
     wp_register_style('styles', get_template_directory_uri() . '/styles/styles.css', array(), 1, 'all');
     wp_enqueue_style('styles');
 
