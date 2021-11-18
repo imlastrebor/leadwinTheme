@@ -366,6 +366,10 @@ template {
  *
  */
 
+/*
+*                 ---| Text styles |---          
+*/
+
 h1,
 h2,
 h3 {
@@ -376,51 +380,81 @@ h3 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 6em;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 4em;
 }
 
 p {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.25rem;
 }
-.container {
-}
-
-.hero,
-.introduction,
-.team {
-  min-height: 80vh;
-}
-.section-content {
-  max-width: 1080px;
-  min-height: 80vh;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  align-items: center;
-  justify-items: center;
-  margin: auto;
-  padding: 0 1.5rem;
-}
-
-.hero {
-  background-color: #032d11;
-}
-
-.introduction {
-  background-color: #fff;
-}
-.team {
-  background-color: #fafafa;
-}
 
 .hero-content > h1,
 .hero-content > p {
   color: white;
 }
+
+/*
+*                --- | END of text styles | ---
+*/
+
+/*
+*               ---| Section container styles |---          
+*/
+.section-container {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8em 1.5em;
+}
+
+.section-container:first-of-type {
+  min-height: 80vh;
+  background-color: #032d11;
+  padding: 0 1.5em;
+}
+
+.section-container:nth-of-type(2) {
+  background-color: white;
+}
+
+/*
+*             ---| END of section container styles |---          
+*/
+
+.section-content {
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-self: center;
+  align-self: center;
+}
+
+.section-container:nth-of-type(2) > .section-content {
+  grid-template-columns: 1fr 2fr;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  max-width: 300px;
+}
+img {
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 600px) {
+  .section-content {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+  }
+}
+
+/*
 
 .hero-image > div {
   display: inline-block;
@@ -430,3 +464,11 @@ p {
 .hero-image {
   max-width: 680px;
 }
+
+
+--------- Keskitys ----------
+
+justify-self: center;
+align-self: center;
+
+*/

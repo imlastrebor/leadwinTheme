@@ -2,7 +2,7 @@
 
 <main class="container">
 <?php $hero = get_field('hero'); ?>
-    <section class="hero">
+    <section class="section-container">
         <div class="section-content">
             <article class="hero-content">
                 <h1>
@@ -16,7 +16,7 @@
             </article>
 
             <section class="hero-image">
-                <div>
+                <div class="image">
                     <svg width="300" height="301" viewBox="0 0 300 301" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14.0625 14.5635H267.188V258.313H14.0625V14.5635Z" fill="#609973"/>
                     <path d="M84.375 183.313C112.852 183.313 135.938 160.228 135.938 131.751C135.938 103.274 112.852 80.1885 84.375 80.1885C55.8978 80.1885 32.8125 103.274 32.8125 131.751C32.8125 160.228 55.8978 183.313 84.375 183.313Z" fill="#FBDF63"/>
@@ -56,9 +56,9 @@
         </div>
     </section>
 <?php $introduction = get_field('introduction'); ?>
-    <section class="introduction">
+    <section class="section-container">
         <div class="section-content">
-            <section class="introduction-image">
+            <section class="introduction-image image">
                         <img src="<?php echo esc_url($introduction['image']['url']); ?>" alt="<?php echo esc_attr($introduction['image']['alt']); ?>" />
             </section>
             <section class="introduction-content">
@@ -72,7 +72,7 @@
         </div>
     </section>
     <?php $team = get_field('team'); ?>
-    <section class="team">
+    <section class="section-container">
         <div class="section-content">
             <section class="team-content">
             <h2>
@@ -82,7 +82,7 @@
                 <?php echo $team['text']?>
             </p>
             </section>
-            <section class="team-image">
+            <section class="team-image image">
                         <img src="<?php echo esc_url($team['image']['url']); ?>" alt="<?php echo esc_attr($team['image']['alt']); ?>" />
             </section>
         </div>
