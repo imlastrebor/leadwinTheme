@@ -12,7 +12,6 @@
                     <?php echo $hero['subtext']?>
                 </p>
 
-                <button><?php echo $hero['button_text'] ?></button>
             </article>
 
             <section class="hero-image">
@@ -59,8 +58,11 @@
     <section class="section-container">
         <div class="section-content">
             <section class="introduction-image image">
-                        <img src="<?php echo esc_url($introduction['image']['url']); ?>" alt="<?php echo esc_attr($introduction['image']['alt']); ?>" />
-            </section>
+            <?php if($introduction['image']): ?>
+                <img src="<?php echo esc_url($introduction['image']['url']); ?>" alt="<?php echo esc_attr($introduction['image']['alt']); ?>" />
+            <?php endif ?>
+
+        </section>
             <section class="introduction-content">
                 <h2>
                     <?php echo $introduction['title'] ?>
@@ -83,8 +85,12 @@
             </p>
             </section>
             <section class="team-image image">
-                        <img src="<?php echo esc_url($team['image']['url']); ?>" alt="<?php echo esc_attr($team['image']['alt']); ?>" />
-            </section>
+           <?php if($team['image']): ?>
+                    <img src="<?php echo esc_url($team['image']['url']); ?>" alt="<?php echo esc_attr($team['image']['alt']); ?>" />
+                <?php endif; ?>
+ 
+
+        </section>
         </div>
     </section>
 </main>

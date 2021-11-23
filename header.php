@@ -10,15 +10,29 @@
 <body>
     <header>
 
-<?php $introduction = get_field('introduction'); ?>
-<?php $team = get_field('team'); ?>
+    <?php 
+    
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+     
+    if ( has_custom_logo() ) {
+        echo '<img class="logo" src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . " logo" . '">';
+    } else {
+        echo '<h1>' . get_bloginfo('name') . '</h1>';
+    }
 
+    
+    ?>
+
+<!--    ---| Navbar |---          
+           
 
 <div class="topnav" id="myTopnav">
-  <a href="#introduction"> <?php echo $introduction['title'] ?> </a>
-  <a href="#team"> <?php echo $team['title'] ?> </a>
+  <a href="#introduction"> Esittely </a>
+  <a href="#team"> Tiimi </a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
+ -->
     </header>

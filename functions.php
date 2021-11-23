@@ -12,6 +12,12 @@ function load_stylesheets()
 }
 add_action('wp_enqueue_scripts', 'load_stylesheets');
 
+
+add_theme_support( 'custom-logo' );
+
+/* 
+        ---| Navbar |---          
+
 function wpb_adding_scripts() {
     wp_register_script('my_amazing_script', get_template_directory_uri() . '/scripts/nav.js', array(),'1.0', false);
     wp_enqueue_script('my_amazing_script');
@@ -21,4 +27,7 @@ add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts', 999 );
 
 add_theme_support('menus');
 
+*/
+
 ?>
+
